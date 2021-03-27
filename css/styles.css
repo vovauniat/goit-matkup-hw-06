@@ -267,8 +267,14 @@ img {
 
 /* ============================= HERO ======================== */
 .hero {
-  background: url(./img/herophoto.jpg);
-  background-color: rgba(47, 48, 58, 0.4);
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(./img/herophoto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: auto;
   height: 600px;
   padding-top: 200px;
@@ -496,16 +502,20 @@ img {
 } */
 .cust-list {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
 }
 
+.cust-list-item {
+  margin-left: 30px;
+}
 .cust-list-element {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-basis: calc(100% / 6 - 30px);
-  margin-left: 30px;
 
   width: 170px;
   height: 90px;
@@ -536,6 +546,7 @@ img {
 }
 .fut-all {
   display: flex;
+  justify-content: space-between;
   flex-wrap: nowrap;
   align-items: baseline;
 }
@@ -595,6 +606,7 @@ img {
 .fut-form-blok {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   margin-left: 93px;
 }
 
@@ -653,14 +665,8 @@ img {
   background-color: #2196f3;
   width: 200;
   border-radius: 4px;
-  border: var(--accent-color);
+  border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-.modal-form-btn:hover,
-.modal-form-btn:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
 }
 
 .fut-form-icon {
@@ -866,15 +872,19 @@ img {
 
   color: #ffffff;
   padding: 10px 55px;
+
   background-color: #2196f3;
   min-width: 200;
   border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-btn:hover,
 .modal-form-btn:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
+  background-color: #188ce8;
 }
 
 /* =================================modal okno=======================================*/
